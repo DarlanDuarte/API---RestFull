@@ -10,8 +10,15 @@ const app = express()
 db.connect()
 
 
-// habilita server para receber dados via post (formulario)
-app.use(express.urlencoded({extended: true}))
+/*habilita server para receber dados via post (formulario) // no metodo API-Restful nao precisa usar dessa maneira
+app.use(express.urlencoded({extended: true}))*/
+
+
+
+// Abilita server para receber dados no formato JSON
+app.use(express.json())
+
+
 
 //definindo as rotas
 app.use('/api', routes)

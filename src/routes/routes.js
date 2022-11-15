@@ -10,17 +10,11 @@ const ProductsController = require('../controllers/products')
 
 // id? = parametro opcional
 router.get('/products/:id?', ProductsController.get)
-//router.post('/products', ProductsController.post)
+router.post('/products', ProductsController.post)
 //router.put('/products', ProductsController.put)
 //router.delete('/products', ProductsController.delete)
 
 
 
-
-router.get('/clientes', (req, res) => {
-    res.send({
-        ok: 123
-    })
-})
 
 module.exports = router
